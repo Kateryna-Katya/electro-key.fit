@@ -1212,3 +1212,131 @@ img {
         display: none;
     }
 }
+/* Стили для внутренних страниц (Stage 5.2) */
+.pages {
+    min-height: 80vh;
+    padding-top: 160px;
+    /* Учет фиксированного хедера */
+}
+
+.contact-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 60px 0;
+}
+
+.contact-card {
+    background: var(--bg-white);
+    padding: 40px;
+    border-radius: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    border-color: var(--primary);
+}
+
+.contact-card__icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.contact-card h2 {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.contact-card p {
+    font-size: 15px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primary);
+}
+
+.contact-address {
+    font-style: normal;
+    line-height: 1.6;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.contact-extra {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+}
+.legal-content {
+    max-width: 900px;
+    margin: 40px auto;
+    background: var(--bg-white);
+    padding: 50px;
+    border-radius: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.legal-content h2 {
+    font-size: 24px;
+    margin: 30px 0 15px;
+    color: var(--text-main);
+}
+
+.legal-content p {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+.legal-content ul {
+    margin-bottom: 30px;
+    list-style: none;
+}
+
+.legal-content ul li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    color: var(--text-muted);
+}
+
+.legal-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 8px;
+    height: 8px;
+    background: var(--grad-accent);
+    border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+    .legal-content {
+        padding: 30px 20px;
+    }
+}
