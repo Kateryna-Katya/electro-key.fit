@@ -125,3 +125,9 @@ gsap.from('.solution-card', {
 
 // Re-init icons for new section
 lucide.createIcons();
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true,
+    offset: 100
+});

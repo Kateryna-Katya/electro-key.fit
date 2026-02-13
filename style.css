@@ -476,3 +476,105 @@ img {
         grid-template-columns: 1fr;
     }
 }
+.process {
+    background: var(--bg-white);
+    position: relative;
+    overflow: hidden;
+}
+
+.process__steps {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Центральная линия */
+.process__steps::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--primary-light), transparent);
+    transform: translateX(-50%);
+}
+
+.process-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+    width: 100%;
+}
+
+.process-item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.process-item__num {
+    width: 80px;
+    height: 80px;
+    background: var(--grad-accent);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+}
+
+.process-item__content {
+    width: 40%;
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+}
+
+.process-item:hover .process-item__content {
+    background: #fff;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.process-item__title {
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: var(--primary);
+}
+
+.process-item__text {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .process__steps::before {
+        left: 40px;
+    }
+
+    .process-item,
+    .process-item:nth-child(even) {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 30px;
+    }
+
+    .process-item__content {
+        width: calc(100% - 110px);
+    }
+
+    .process-item__num {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+        flex-shrink: 0;
+    }
+}
