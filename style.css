@@ -1141,3 +1141,74 @@ img {
         text-align: center;
     }
 }
+/* Стилизация иконок бургера */
+.header__burger {
+    display: none;
+    /* По умолчанию скрыт на десктопах */
+    width: 30px;
+    height: 20px;
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 2001;
+    /* Выше мобильного меню */
+}
+
+/* Рисуем центральную линию */
+.header__burger span {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-main);
+    left: 0;
+    top: 9px;
+    transition: var(--transition);
+}
+
+/* Рисуем верхнюю и нижнюю линии через псевдоэлементы */
+.header__burger::before,
+.header__burger::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: var(--text-main);
+    left: 0;
+    transition: var(--transition);
+}
+
+.header__burger::before {
+    top: 0;
+}
+
+.header__burger::after {
+    bottom: 0;
+}
+
+/* Эффект трансформации в крестик (когда меню открыто) */
+.header__burger--active span {
+    transform: scale(0);
+}
+
+.header__burger--active::before {
+    top: 9px;
+    transform: rotate(45deg);
+}
+
+.header__burger--active::after {
+    top: 9px;
+    transform: rotate(-45deg);
+}
+
+/* ПОКАЗЫВАЕМ БУРГЕР НА МОБИЛЬНЫХ (до 992px) */
+@media (max-width: 992px) {
+    .header__burger {
+        display: block;
+    }
+
+    /* Скрываем обычное меню, если оно еще не скрыто */
+    .header__nav {
+        display: none;
+    }
+}
