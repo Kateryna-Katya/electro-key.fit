@@ -110,3 +110,18 @@ gsap.from('.hero__content > *', {
     ease: 'power4.out',
     delay: 0.5
 });
+// Animation for Solutions Cards
+gsap.from('.solution-card', {
+    scrollTrigger: {
+        trigger: '.solutions__grid',
+        start: 'top 80%',
+    },
+    y: 60,
+    opacity: 0,
+    duration: 1,
+    stagger: 0.2,
+    ease: 'power3.out'
+});
+
+// Re-init icons for new section
+lucide.createIcons();

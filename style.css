@@ -354,3 +354,125 @@ img {
         gap: 20px;
     }
 }
+.section-padding {
+    padding: 120px 0;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 60px;
+}
+
+.section-title {
+    font-size: clamp(32px, 4vw, 48px);
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    font-size: 18px;
+}
+
+.solutions__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.solution-card {
+    background: var(--bg-white);
+    padding: 40px;
+    border-radius: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.solution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+    border-color: var(--primary-light);
+}
+
+.solution-card--featured {
+    background: var(--bg-light);
+    border: 2px solid var(--primary);
+}
+
+.solution-card__icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--primary);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+    transition: var(--transition);
+}
+
+.solution-card:hover .solution-card__icon {
+    background: var(--primary);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.solution-card__title {
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+.solution-card__text {
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    flex-grow: 1;
+}
+
+.solution-card__list {
+    margin-bottom: 30px;
+}
+
+.solution-card__list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text-main);
+    margin-bottom: 10px;
+}
+
+.solution-card__list svg {
+    width: 18px;
+    height: 18px;
+    color: var(--secondary);
+}
+
+.solution-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    color: var(--primary);
+    font-size: 15px;
+}
+
+.solution-card__link svg {
+    width: 18px;
+    transition: var(--transition);
+}
+
+.solution-card__link:hover svg {
+    transform: translateX(5px);
+}
+
+/* Mobile */
+@media (max-width: 992px) {
+    .solutions__grid {
+        grid-template-columns: 1fr;
+    }
+}
