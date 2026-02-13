@@ -818,3 +818,236 @@ img {
         padding: 20px;
     }
 }
+.contact {
+    background: var(--bg-light);
+}
+
+.contact__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.contact__info {
+    max-width: 500px;
+}
+
+.contact__description {
+    font-size: 18px;
+    color: var(--text-muted);
+    margin: 20px 0 40px;
+}
+
+.contact__details {
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.contact-item__icon {
+    width: 54px;
+    height: 54px;
+    background: #fff;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-item span {
+    display: block;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.contact-item strong {
+    font-size: 18px;
+    color: var(--text-main);
+}
+
+.contact__badge {
+    display: flex;
+    gap: 12px;
+    padding: 20px;
+    background: rgba(16, 185, 129, 0.1);
+    border-radius: 16px;
+    color: #065f46;
+    font-size: 14px;
+}
+
+/* Form Styling */
+.contact__form-box {
+    background: #fff;
+    padding: 50px;
+    border-radius: 32px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.05);
+}
+
+.form__group {
+    margin-bottom: 20px;
+}
+
+.form__group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.form__group input {
+    width: 100%;
+    padding: 14px 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-family: inherit;
+    transition: var(--transition);
+}
+
+.form__group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.form__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 25px 0;
+    font-size: 14px;
+    color: var(--text-muted);
+}
+
+.form__checkbox a {
+    text-decoration: underline;
+    color: var(--primary);
+}
+
+.btn--full {
+    width: 100%;
+    justify-content: center;
+}
+
+/* Messages */
+.form-message {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-message--success {
+    background: #d1fae5;
+    color: #065f46;
+}
+
+.form-message--error {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+@media (max-width: 992px) {
+    .contact__wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .contact__form-box {
+        padding: 30px;
+    }
+}
+.reviews {
+    background: var(--bg-white);
+    padding-bottom: 120px;
+}
+
+.reviews__marquee-wrapper {
+    margin-top: 50px;
+    background: var(--bg-light);
+    padding: 40px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+}
+
+.marquee-track {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    /* Мягкое затухание по краям */
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.marquee-content {
+    display: flex;
+    gap: 100px;
+    /* Большой отступ между отзывами */
+    flex-shrink: 0;
+    min-width: 100%;
+    animation: scroll-left 50s linear infinite;
+}
+
+.marquee-track:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 50px));
+    }
+}
+
+.review-simple {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 450px;
+    flex-shrink: 0;
+}
+
+.review-simple__text {
+    font-size: 18px;
+    color: var(--text-main);
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.review-simple__author {
+    font-size: 14px;
+    color: var(--primary);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Mobile Adjust */
+@media (max-width: 768px) {
+    .marquee-content {
+        gap: 50px;
+    }
+
+    .review-simple {
+        max-width: 300px;
+    }
+
+    .review-simple__text {
+        font-size: 16px;
+    }
+}
