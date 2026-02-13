@@ -1,148 +1,107 @@
-// Initialize Lucide Icons
-lucide.createIcons();
+document.addEventListener('DOMContentLoaded', () => {
+    
+    // 1. Инициализация иконок Lucide
+    lucide.createIcons();
 
-// Initialize Lenis Smooth Scroll
-const lenis = new Lenis();
-function raf(time) {
-    lenis.raf(time);
+    // 2. Плавный скролл Lenis
+    const lenis = new Lenis({
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+    });
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
     requestAnimationFrame(raf);
-}
-requestAnimationFrame(raf);
 
-// Header Scroll Effect
-const header = document.querySelector('.header');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        header.classList.add('header--scrolled');
-    } else {
-        header.classList.remove('header--scrolled');
-    }
-});
+    // 3. Мобильное меню
+    const initMobileMenu = () => {
+        const burger = document.querySelector('.header__burger');
+        const closeBtn = document.querySelector('.mobile-menu__close');
+        const menu = document.querySelector('.mobile-menu');
+        const links = document.querySelectorAll('.mobile-menu__link');
 
-// GSAP Animations Base
-gsap.registerPlugin(ScrollTrigger);
+        const toggleMenu = () => {
+            menu.classList.toggle('mobile-menu--active');
+            document.body.style.overflow = menu.classList.contains('mobile-menu--active') ? 'hidden' : '';
+        };
 
-// Animation for footer columns
-gsap.from('.footer__col', {
-    scrollTrigger: {
-        trigger: '.footer',
-        start: 'top 80%',
-    },
-    opacity: 0,
-    y: 30,
-    duration: 0.8,
-    stagger: 0.2,
-    ease: 'power3.out'
-});
-// THREE.JS HERO ANIMATION
-const initHeroScene = () => {
-    const canvas = document.querySelector('#hero-canvas');
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ canvas: canvas, alpha: true, antialias: true });
-
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-
-    // Создаем геометрию точек (нейронная сфера)
-    const particlesCount = 2000;
-    const posArray = new Float32Array(particlesCount * 3);
-
-    for (let i = 0; i < particlesCount * 3; i++) {
-        posArray[i] = (Math.random() - 0.5) * 10;
-    }
-
-    const particlesGeometry = new THREE.BufferGeometry();
-    particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
-
-    const particlesMaterial = new THREE.PointsMaterial({
-        size: 0.005,
-        color: '#6366f1',
-        transparent: true,
-        opacity: 0.8
-    });
-
-    const particlesMesh = new THREE.Points(particlesGeometry, particlesMaterial);
-    scene.add(particlesMesh);
-
-    camera.position.z = 3;
-
-    // Mouse Interaction
-    let mouseX = 0;
-    let mouseY = 0;
-
-    document.addEventListener('mousemove', (event) => {
-        mouseX = event.clientX;
-        mouseY = event.clientY;
-    });
-
-    // Animation Loop
-    const animate = () => {
-        const targetX = mouseX * 0.0001;
-        const targetY = mouseY * 0.0001;
-
-        particlesMesh.rotation.y += 0.002;
-        particlesMesh.rotation.x += (targetY - particlesMesh.rotation.x) * 0.05;
-        particlesMesh.rotation.y += (targetX - particlesMesh.rotation.y) * 0.05;
-
-        renderer.render(scene, camera);
-        requestAnimationFrame(animate);
+        burger?.addEventListener('click', toggleMenu);
+        closeBtn?.addEventListener('click', toggleMenu);
+        links.forEach(link => link.addEventListener('click', toggleMenu));
     };
 
-    animate();
+    // 4. Cookie Popup
+    const initCookies = () => {
+        const popup = document.getElementById('cookie-popup');
+        const acceptBtn = document.getElementById('cookie-accept');
 
-    // Resize
-    window.addEventListener('resize', () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        if (!localStorage.getItem('cookies-accepted')) {
+            setTimeout(() => popup?.classList.add('cookie-popup--show'), 3000);
+        }
+
+        acceptBtn?.addEventListener('click', () => {
+            localStorage.setItem('cookies-accepted', 'true');
+            popup?.classList.remove('cookie-popup--show');
+        });
+    };
+
+    // 5. Контактная форма и капча
+    const initForm = () => {
+        const form = document.getElementById('ajax-form');
+        const captchaLabel = document.getElementById('captcha-question');
+        const captchaInput = document.getElementById('captcha-input');
+        if (!form) return;
+
+        let result;
+        const gen = () => {
+            const a = Math.floor(Math.random() * 10);
+            const b = Math.floor(Math.random() * 10);
+            result = a + b;
+            captchaLabel.innerText = `${a} + ${b} = ?`;
+        };
+        gen();
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const success = document.getElementById('form-success');
+            const error = document.getElementById('form-error');
+
+            if (parseInt(captchaInput.value) !== result) {
+                error.style.display = 'block';
+                return;
+            }
+
+            const btn = form.querySelector('button');
+            btn.innerText = "Отправка...";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                success.style.display = 'block';
+                error.style.display = 'none';
+                form.reset();
+                btn.innerText = "Отправить запрос";
+                btn.disabled = false;
+                gen();
+            }, 1500);
+        });
+    };
+
+    // 6. Инициализация AOS (заменяет GSAP ScrollTrigger)
+    AOS.init({
+        duration: 800,
+        easing: 'ease-out-cubic',
+        once: true,
+        offset: 50
     });
-};
 
-initHeroScene();
+    // 7. Запуск анимации Three.js (если функция определена)
+    if (typeof initHeroScene === 'function') {
+        initHeroScene();
+    }
 
-// GSAP Anim for Hero Text
-gsap.from('.hero__content > *', {
-    y: 50,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.2,
-    ease: 'power4.out',
-    delay: 0.5
-});
-// Animation for Solutions Cards
-gsap.from('.solution-card', {
-    scrollTrigger: {
-        trigger: '.solutions__grid',
-        start: 'top 80%',
-    },
-    y: 60,
-    opacity: 0,
-    duration: 1,
-    stagger: 0.2,
-    ease: 'power3.out'
-});
-
-// Re-init icons for new section
-lucide.createIcons();
-// Initialize AOS
-AOS.init({
-    duration: 1000,
-    once: true,
-    offset: 100
-});
-// Обновляем иконки Lucide для новой секции
-lucide.createIcons();
-
-// Дополнительная анимация появления через GSAP для плавности
-gsap.from('.blog-card', {
-    scrollTrigger: {
-        trigger: '.blog__grid',
-        start: 'top 85%'
-    },
-    opacity: 0,
-    y: 40,
-    duration: 1,
-    stagger: 0.2,
-    ease: 'power3.out'
+    initMobileMenu();
+    initCookies();
+    initForm();
 });

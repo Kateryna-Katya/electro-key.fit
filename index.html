@@ -52,356 +52,333 @@
             </div>
         </header>
 
-        <main>
-<section id="hero" class="header-padding hero">
-    <canvas id="hero-canvas"></canvas>
+<main>
+    <section id="hero" class="header-padding hero">
+        <canvas id="hero-canvas"></canvas>
 
-    <div class="container hero__container">
-        <div class="hero__content">
-            <div class="hero__badge" data-aos="fade-down">
-                <i data-lucide="cpu"></i>
-                <span>Технология нового поколения</span>
-            </div>
-            <h1 class="hero__title">
-                Проектируем <span class="text-gradient">AI-ассистентов</span>, которые меняют правила игры
-            </h1>
-            <p class="hero__text">
-                От простых чат-ботов до сложных автономных систем. Платформа года для тех, кто хочет переосмыслить
-                подход к развитию цифровой инфраструктуры.
-            </p>
-            <div class="hero__actions">
-                <a href="#contact" class="btn btn--primary">Начать сейчас</a>
-                <a href="#solutions" class="btn btn--outline">Узнать детали</a>
-            </div>
-            <div class="hero__stats">
-                <div class="stat-item">
-                    <span class="stat-num">24/7</span>
-                    <span class="stat-desc">Поддержка</span>
+        <div class="container hero__container">
+            <div class="hero__content">
+                <div class="hero__badge" data-aos="fade-down" data-aos-duration="1000">
+                    <i data-lucide="cpu"></i>
+                    <span>Технология нового поколения</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-num">100+</span>
-                    <span class="stat-desc">AI решений</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="solutions" class="solutions section-padding">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Наши <span class="text-gradient">решения</span></h2>
-            <p class="section-subtitle">Решения, которые меняют правила игры и открывают новые возможности для вашего
-                бизнеса в
-                <?= $domainTitle ?>.
-            </p>
-        </div>
-
-        <div class="solutions__grid">
-            <div class="solution-card">
-                <div class="solution-card__icon">
-                    <i data-lucide="message-square-more"></i>
-                </div>
-                <h3 class="solution-card__title">Интеллектуальные чат-боты</h3>
-                <p class="solution-card__text">
-                    Создаем системы поддержки, которые понимают контекст и решают задачи клиентов 24/7 без участия
-                    человека.
+                <h1 class="hero__title" data-aos="fade-up" data-aos-delay="200">
+                    Проектируем <span class="text-gradient">AI-ассистентов</span>, которые меняют правила игры
+                </h1>
+                <p class="hero__text" data-aos="fade-up" data-aos-delay="400">
+                    От простых чат-ботов до сложных автономных систем. Платформа года для тех, кто хочет переосмыслить
+                    подход к развитию цифровой инфраструктуры.
                 </p>
-                <ul class="solution-card__list">
-                    <li><i data-lucide="check-circle-2"></i> Интеграция с CRM</li>
-                    <li><i data-lucide="check-circle-2"></i> Мультиязычность</li>
-                </ul>
-                <a href="#contact" class="solution-card__link">Узнать детали <i data-lucide="arrow-right"></i></a>
-            </div>
-
-            <div class="solution-card solution-card--featured">
-                <div class="solution-card__icon">
-                    <i data-lucide="brain-circuit"></i>
+                <div class="hero__actions" data-aos="fade-up" data-aos-delay="600">
+                    <a href="#contact" class="btn btn--primary">Начать сейчас</a>
+                    <a href="#solutions" class="btn btn--outline">Узнать детали</a>
                 </div>
-                <h3 class="solution-card__title">Персональные AI-ассистенты</h3>
-                <p class="solution-card__text">
-                    Сложные автономные агенты для автоматизации внутренних процессов, управления календарем и анализа
-                    данных.
-                </p>
-                <ul class="solution-card__list">
-                    <li><i data-lucide="check-circle-2"></i> Обучение на ваших данных</li>
-                    <li><i data-lucide="check-circle-2"></i> Высокая безопасность</li>
-                </ul>
-                <a href="#contact" class="btn btn--primary">Запросить доступ</a>
-            </div>
-
-            <div class="solution-card">
-                <div class="solution-card__icon">
-                    <i data-lucide="layers"></i>
-                </div>
-                <h3 class="solution-card__title">Инфраструктура и API</h3>
-                <p class="solution-card__text">
-                    Разработка кастомных решений для связи ваших сервисов с мощными языковыми моделями последнего
-                    поколения.
-                </p>
-                <ul class="solution-card__list">
-                    <li><i data-lucide="check-circle-2"></i> Масштабируемость</li>
-                    <li><i data-lucide="check-circle-2"></i> Поддержка 24/7</li>
-                </ul>
-                <a href="#contact" class="solution-card__link">Узнать детали <i data-lucide="arrow-right"></i></a>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="process" class="process section-padding">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2 class="section-title">Пошаговый <span class="text-gradient">путь</span> к результату</h2>
-            <p class="section-subtitle">Легко разобраться без опыта: мы берем на себя всю техническую часть, обеспечивая
-                быстрый и лёгкий старт.</p>
-        </div>
-
-        <div class="process__steps">
-            <div class="process-item" data-aos="fade-right">
-                <div class="process-item__num">01</div>
-                <div class="process-item__content">
-                    <h3 class="process-item__title">Анализ и стратегия</h3>
-                    <p class="process-item__text">
-                        Изучаем ваши задачи и подбираем оптимальную модель AI. Оцениваем перспективы проекта и формируем
-                        передовую цифровую инфраструктуру.
-                    </p>
-                </div>
-            </div>
-
-            <div class="process-item" data-aos="fade-left" data-aos-delay="200">
-                <div class="process-item__num">02</div>
-                <div class="process-item__content">
-                    <h3 class="process-item__title">Проектирование логики</h3>
-                    <p class="process-item__text">
-                        Разрабатываем архитектуру диалогов и связей. Подключение занимает буквально пару минут благодаря
-                        нашим готовым пресетам.
-                    </p>
-                </div>
-            </div>
-
-            <div class="process-item" data-aos="fade-right" data-aos-delay="400">
-                <div class="process-item__num">03</div>
-                <div class="process-item__content">
-                    <h3 class="process-item__title">Обучение и запуск</h3>
-                    <p class="process-item__text">
-                        Наполняем ассистента знаниями и интегрируем в вашу среду. Платформа уже доступна в Европе для
-                        мгновенного развертывания.
-                    </p>
-                </div>
-            </div>
-
-            <div class="process-item" data-aos="fade-left" data-aos-delay="600">
-                <div class="process-item__num">04</div>
-                <div class="process-item__content">
-                    <h3 class="process-item__title">Экспертная поддержка</h3>
-                    <p class="process-item__text">
-                        Мы — ваш проверенный партнер. Обеспечиваем поддержку на всех этапах и предлагаем стратегии роста
-                        на базе инноваций.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="blog" class="blog section-padding bg-light-alt">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2 class="section-title">Свежие мысли и <span class="text-gradient">кейсы</span></h2>
-            <p class="section-subtitle">Читайте о том, как AI-инструменты для реальных задач меняют подход к бизнесу и
-                создают новые возможности.</p>
-        </div>
-
-        <div class="blog__grid">
-            <article class="blog-card" data-aos="fade-up">
-                <div class="blog-card__image">
-                    <img src="/img/one.jpg" alt="AI Passive Income">
-                    <span class="blog-card__badge">Инсайты</span>
-                </div>
-                <div class="blog-card__content">
-                    <div class="blog-card__meta">
-                        <span><i data-lucide="calendar"></i> 12 Фев 2026</span>
-                        <span><i data-lucide="clock"></i> 5 мин</span>
+                <div class="hero__stats" data-aos="fade-up" data-aos-delay="800">
+                    <div class="stat-item">
+                        <span class="stat-num">24/7</span>
+                        <span class="stat-desc">Поддержка</span>
                     </div>
-                    <h3 class="blog-card__title">Технология для пассивного дохода: как боты экономят ваше время</h3>
-                    <p class="blog-card__text">Разбираем, как переосмыслить подход к развитию и внедрить автоматизацию,
-                        которая работает на вас 24/7.</p>
-                    <a href="#contact" class="blog-card__more">Читать далее <i data-lucide="chevron-right"></i></a>
-                </div>
-            </article>
-
-            <article class="blog-card" data-aos="fade-up" data-aos-delay="200">
-                <div class="blog-card__image">
-                    <img src="/img/one.jpg" alt="Fast Start AI">
-                    <span class="blog-card__badge">Обучение</span>
-                </div>
-                <div class="blog-card__content">
-                    <div class="blog-card__meta">
-                        <span><i data-lucide="calendar"></i> 08 Фев 2026</span>
-                        <span><i data-lucide="clock"></i> 8 мин</span>
+                    <div class="stat-item">
+                        <span class="stat-num">100+</span>
+                        <span class="stat-desc">AI решений</span>
                     </div>
-                    <h3 class="blog-card__title">Быстрый и лёгкий старт в мире AI-ассистентов без опыта программирования
-                    </h3>
-                    <p class="blog-card__text">Пошаговый путь, понятный каждому. Рассказываем, как запустить первого
-                        бота всего за пару минут.</p>
-                    <a href="#contact" class="blog-card__more">Читать далее <i data-lucide="chevron-right"></i></a>
-                </div>
-            </article>
-
-            <article class="blog-card" data-aos="fade-up" data-aos-delay="400">
-                <div class="blog-card__image">
-                    <img src="/img/one.jpg" alt="Future Trends">
-                    <span class="blog-card__badge">Тренды</span>
-                </div>
-                <div class="blog-card__content">
-                    <div class="blog-card__meta">
-                        <span><i data-lucide="calendar"></i> 03 Фев 2026</span>
-                        <span><i data-lucide="clock"></i> 6 мин</span>
-                    </div>
-                    <h3 class="blog-card__title">Инновации в Европе: почему платформа уже доступна и востребована</h3>
-                    <p class="blog-card__text">Оценить перспективы проекта и узнать, какие решения меняют правила игры
-                        на рынке Франции и ЕС.</p>
-                    <a href="#contact" class="blog-card__more">Читать далее <i data-lucide="chevron-right"></i></a>
-                </div>
-            </article>
-        </div>
-
-        <div class="blog__footer" data-aos="fade-up">
-            <a href="#contact" class="btn btn--outline">Посмотреть все статьи</a>
-        </div>
-    </div>
-</section>
-<section id="reviews" class="reviews section-padding overflow-hidden">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2 class="section-title">Мнение <span class="text-gradient">экспертов</span></h2>
-            <p class="section-subtitle">Проверенный партнер для бизнеса в Европе. Оцените перспективы сотрудничества с
-                <?= $domainTitle ?>.
-            </p>
-        </div>
-    </div>
-
-    <div class="reviews__marquee-wrapper">
-        <div class="marquee-track">
-            <div class="marquee-content">
-                <div class="review-simple">
-                    <p class="review-simple__text">"Инновационная технология. Подключение заняло всего 2 минуты, и бот
-                        уже в работе."</p>
-                    <span class="review-simple__author">— Jean-Pierre L., Париж</span>
-                </div>
-                <div class="review-simple">
-                    <p class="review-simple__text">"Переосмыслите подход к развитию: их AI-ассистенты реально меняют
-                        правила игры."</p>
-                    <span class="review-simple__author">— Sophie Martin, Лион</span>
-                </div>
-                <div class="review-simple">
-                    <p class="review-simple__text">"Лучшая стратегия роста на базе инноваций. Поддержка по всем вопросам
-                        на высоте."</p>
-                    <span class="review-simple__author">— Marc Dubois, Марсель</span>
-                </div>
-                <div class="review-simple">
-                    <p class="review-simple__text">"Технология для пассивного дохода стала реальностью. Понятный каждому
-                        путь."</p>
-                    <span class="review-simple__author">— Lucie Bernard, Бордо</span>
-                </div>
-                <div class="review-simple">
-                    <p class="review-simple__text">"Инновационная технология. Подключение заняло всего 2 минуты, и бот
-                        уже в работе."</p>
-                    <span class="review-simple__author">— Jean-Pierre L., Париж</span>
-                </div>
-                <div class="review-simple">
-                    <p class="review-simple__text">"Переосмыслите подход к развитию: их AI-ассистенты реально меняют
-                        правила игры."</p>
-                    <span class="review-simple__author">— Sophie Martin, Лион</span>
-                </div>
-                <div class="review-simple">
-                    <p class="review-simple__text">"Лучшая стратегия роста на базе инноваций. Поддержка по всем вопросам
-                        на высоте."</p>
-                    <span class="review-simple__author">— Marc Dubois, Марсель</span>
-                </div>
-                <div class="review-simple">
-                    <p class="review-simple__text">"Технология для пассивного дохода стала реальностью. Понятный каждому
-                        путь."</p>
-                    <span class="review-simple__author">— Lucie Bernard, Бордо</span>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section id="contact" class="contact section-padding">
-    <div class="container">
-        <div class="contact__wrapper">
-            <div class="contact__info" data-aos="fade-right">
-                <h2 class="section-title">Готовы <span class="text-gradient">начать?</span></h2>
-                <p class="contact__description">
-                    Бесплатная консультация по всем вопросам. Наши эксперты помогут оценить перспективы проекта и
-                    подобрать идеальное решение.
-                </p>
+    </section>
 
-                <div class="contact__details">
-                    <div class="contact-item">
-                        <div class="contact-item__icon"><i data-lucide="mail"></i></div>
-                        <div>
-                            <span>Пишите нам</span>
-                            <strong>hello@
-                                <?= $fullDomain ?>
-                            </strong>
+    <section id="solutions" class="solutions section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Наши <span class="text-gradient">решения</span></h2>
+                <p class="section-subtitle">Решения, которые меняют правила игры и открывают новые возможности для
+                    вашего бизнеса в
+                    <?= $domainTitle ?>.
+                </p>
+            </div>
+
+            <div class="solutions__grid">
+                <div class="solution-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="solution-card__icon">
+                        <i data-lucide="message-square-more"></i>
+                    </div>
+                    <h3 class="solution-card__title">Интеллектуальные чат-боты</h3>
+                    <p class="solution-card__text">
+                        Создаем системы поддержки, которые понимают контекст и решают задачи клиентов 24/7 без участия
+                        человека.
+                    </p>
+                    <ul class="solution-card__list">
+                        <li><i data-lucide="check-circle-2"></i> Интеграция с CRM</li>
+                        <li><i data-lucide="check-circle-2"></i> Мультиязычность</li>
+                    </ul>
+                    <a href="#contact" class="solution-card__link">Узнать детали <i data-lucide="arrow-right"></i></a>
+                </div>
+
+                <div class="solution-card solution-card--featured" data-aos="fade-up" data-aos-delay="300">
+                    <div class="solution-card__icon">
+                        <i data-lucide="brain-circuit"></i>
+                    </div>
+                    <h3 class="solution-card__title">Персональные AI-ассистенты</h3>
+                    <p class="solution-card__text">
+                        Сложные автономные агенты для автоматизации внутренних процессов, управления календарем и
+                        анализа данных.
+                    </p>
+                    <ul class="solution-card__list">
+                        <li><i data-lucide="check-circle-2"></i> Обучение на ваших данных</li>
+                        <li><i data-lucide="check-circle-2"></i> Высокая безопасность</li>
+                    </ul>
+                    <a href="#contact" class="btn btn--primary">Запросить доступ</a>
+                </div>
+
+                <div class="solution-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="solution-card__icon">
+                        <i data-lucide="layers"></i>
+                    </div>
+                    <h3 class="solution-card__title">Инфраструктура и API</h3>
+                    <p class="solution-card__text">
+                        Разработка кастомных решений для связи ваших сервисов с мощными языковыми моделями последнего
+                        поколения.
+                    </p>
+                    <ul class="solution-card__list">
+                        <li><i data-lucide="check-circle-2"></i> Масштабируемость</li>
+                        <li><i data-lucide="check-circle-2"></i> Поддержка 24/7</li>
+                    </ul>
+                    <a href="#contact" class="solution-card__link">Узнать детали <i data-lucide="arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="process section-padding">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Пошаговый <span class="text-gradient">путь</span> к результату</h2>
+                <p class="section-subtitle">Легко разобраться без опыта: мы берем на себя всю техническую часть,
+                    обеспечивая быстрый и лёгкий старт.</p>
+            </div>
+
+            <div class="process__steps">
+                <div class="process-item" data-aos="fade-right">
+                    <div class="process-item__num">01</div>
+                    <div class="process-item__content">
+                        <h3 class="process-item__title">Анализ и стратегия</h3>
+                        <p class="process-item__text">Изучаем ваши задачи и подбираем оптимальную модель AI. Оцениваем
+                            перспективы проекта и формируем цифровую инфраструктуру.</p>
+                    </div>
+                </div>
+
+                <div class="process-item" data-aos="fade-left" data-aos-delay="200">
+                    <div class="process-item__num">02</div>
+                    <div class="process-item__content">
+                        <h3 class="process-item__title">Проектирование логики</h3>
+                        <p class="process-item__text">Разрабатываем архитектуру диалогов и связей. Подключение занимает
+                            буквально пару минут благодаря нашим пресетам.</p>
+                    </div>
+                </div>
+
+                <div class="process-item" data-aos="fade-right" data-aos-delay="400">
+                    <div class="process-item__num">03</div>
+                    <div class="process-item__content">
+                        <h3 class="process-item__title">Обучение и запуск</h3>
+                        <p class="process-item__text">Наполняем ассистента знаниями и интегрируем в вашу среду.
+                            Платформа уже доступна в Европе для мгновенного развертывания.</p>
+                    </div>
+                </div>
+
+                <div class="process-item" data-aos="fade-left" data-aos-delay="600">
+                    <div class="process-item__num">04</div>
+                    <div class="process-item__content">
+                        <h3 class="process-item__title">Экспертная поддержка</h3>
+                        <p class="process-item__text">Мы — ваш проверенный партнер. Обеспечиваем поддержку на всех
+                            этапах и предлагаем стратегии роста на базе инноваций.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="blog section-padding bg-light-alt">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Свежие мысли и <span class="text-gradient">кейсы</span></h2>
+                <p class="section-subtitle">Читайте о том, как AI-инструменты меняют подход к бизнесу и создают новые
+                    возможности.</p>
+            </div>
+
+            <div class="blog__grid">
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="blog-card__image">
+                        <img src="./img/one.jpg" alt="AI Passive Income">
+                        <span class="blog-card__badge">Инсайты</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__meta">
+                            <span><i data-lucide="calendar"></i> 12 Фев 2026</span>
+                            <span><i data-lucide="clock"></i> 5 мин</span>
+                        </div>
+                        <h3 class="blog-card__title">Технология для пассивного дохода: как боты экономят ваше время</h3>
+                        <p class="blog-card__text">Разбираем, как внедрить автоматизацию, которая работает на вас 24/7.
+                        </p>
+                        <a href="#contact" class="blog-card__more">Читать далее <i data-lucide="chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="blog-card__image">
+                        <img src="./img/one.jpg" alt="Fast Start AI">
+                        <span class="blog-card__badge">Обучение</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__meta">
+                            <span><i data-lucide="calendar"></i> 08 Фев 2026</span>
+                            <span><i data-lucide="clock"></i> 8 мин</span>
+                        </div>
+                        <h3 class="blog-card__title">Быстрый и лёгкий старт в мире AI-ассистентов без опыта</h3>
+                        <p class="blog-card__text">Пошаговый путь, понятный каждому. Рассказываем, как запустить первого
+                            бота за пару минут.</p>
+                        <a href="#contact" class="blog-card__more">Читать далее <i data-lucide="chevron-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="blog-card__image">
+                        <img src="./img/one.jpg" alt="Future Trends">
+                        <span class="blog-card__badge">Тренды</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <div class="blog-card__meta">
+                            <span><i data-lucide="calendar"></i> 03 Фев 2026</span>
+                            <span><i data-lucide="clock"></i> 6 мин</span>
+                        </div>
+                        <h3 class="blog-card__title">Инновации в Европе: почему платформа уже востребована</h3>
+                        <p class="blog-card__text">Оценить перспективы проекта и узнать, какие решения меняют правила
+                            игры на рынке ЕС.</p>
+                        <a href="#contact" class="blog-card__more">Читать далее <i data-lucide="chevron-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="blog__footer" data-aos="fade-up">
+                <a href="#contact" class="btn btn--outline">Посмотреть все статьи</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="reviews section-padding overflow-hidden">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Мнение <span class="text-gradient">экспертов</span></h2>
+                <p class="section-subtitle">Проверенный партнер для бизнеса в Европе. Оцените перспективы сотрудничества
+                    с
+                    <?= $domainTitle ?>.
+                </p>
+            </div>
+        </div>
+
+        <div class="reviews__marquee-wrapper">
+            <div class="marquee-track">
+                <div class="marquee-content">
+                    <div class="review-simple">
+                        <p class="review-simple__text">"Инновационная технология. Подключение заняло всего 2 минуты, и
+                            бот уже в работе."</p>
+                        <span class="review-simple__author">— Jean-Pierre L., Париж</span>
+                    </div>
+                    <div class="review-simple">
+                        <p class="review-simple__text">"Переосмыслите подход к развитию: их AI-ассистенты реально меняют
+                            правила игры."</p>
+                        <span class="review-simple__author">— Sophie Martin, Лион</span>
+                    </div>
+                    <div class="review-simple">
+                        <p class="review-simple__text">"Лучшая стратегия роста на базе инноваций. Поддержка на высоте."
+                        </p>
+                        <span class="review-simple__author">— Marc Dubois, Марсель</span>
+                    </div>
+                    <div class="review-simple">
+                        <p class="review-simple__text">"Технология для пассивного дохода стала реальностью. Понятный
+                            путь."</p>
+                        <span class="review-simple__author">— Lucie Bernard, Бордо</span>
+                    </div>
+                    <div class="review-simple">
+                        <p class="review-simple__text">"Инновационная технология. Подключение заняло всего 2 минуты, и
+                            бот уже в работе."</p>
+                        <span class="review-simple__author">— Jean-Pierre L., Париж</span>
+                    </div>
+                    <div class="review-simple">
+                        <p class="review-simple__text">"Переосмыслите подход к развитию: их AI-ассистенты реально меняют
+                            правила игры."</p>
+                        <span class="review-simple__author">— Sophie Martin, Лион</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="contact__wrapper">
+                <div class="contact__info" data-aos="fade-right">
+                    <h2 class="section-title">Готовы <span class="text-gradient">начать?</span></h2>
+                    <p class="contact__description">Бесплатная консультация по всем вопросам. Наши эксперты помогут
+                        оценить перспективы проекта.</p>
+                    <div class="contact__details">
+                        <div class="contact-item">
+                            <div class="contact-item__icon"><i data-lucide="mail"></i></div>
+                            <div>
+                                <span>Пишите нам</span>
+                                <strong>hello@
+                                    <?= $fullDomain ?>
+                                </strong>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item__icon"><i data-lucide="phone"></i></div>
+                            <div>
+                                <span>Звоните нам</span>
+                                <strong>+33 1 89 48 00 32</strong>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-item">
-                        <div class="contact-item__icon"><i data-lucide="phone"></i></div>
-                        <div>
-                            <span>Звоните нам</span>
-                            <strong>+33 1 89 48 00 32</strong>
+                    <div class="contact__badge">
+                        <i data-lucide="info"></i>
+                        <span>Платформа уже доступна в Европе. Поддержка на русском языке.</span>
+                    </div>
+                </div>
+
+                <div class="contact__form-box" data-aos="fade-left">
+                    <form id="ajax-form" class="form">
+                        <div class="form__group">
+                            <label for="name">Ваше имя</label>
+                            <input type="text" id="name" name="name" placeholder="Александр" required>
                         </div>
-                    </div>
+                        <div class="form__group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" placeholder="mail@example.com" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="33123456789" pattern="[0-9]+"
+                                title="Только цифры" required>
+                        </div>
+                        <div class="form__group">
+                            <label>Решите пример: <span id="captcha-question"></span></label>
+                            <input type="text" id="captcha-input" placeholder="Ответ" required>
+                        </div>
+                        <div class="form__checkbox">
+                            <input type="checkbox" id="agree" required>
+                            <label for="agree">Я согласен с <a href="./personal-data-policy.php">политикой обработки
+                                    данных</a></label>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">Отправить запрос</button>
+                        <div id="form-success" class="form-message form-message--success">Ваше сообщение успешно
+                            отправлено!</div>
+                        <div id="form-error" class="form-message form-message--error">Ошибка. Проверьте капчу или
+                            данные.</div>
+                    </form>
                 </div>
-
-                <div class="contact__badge">
-                    <i data-lucide="info"></i>
-                    <span>Платформа уже доступна в Европе. Поддержка на русском языке.</span>
-                </div>
-            </div>
-
-            <div class="contact__form-box" data-aos="fade-left">
-                <form id="ajax-form" class="form">
-                    <div class="form__group">
-                        <label for="name">Ваше имя</label>
-                        <input type="text" id="name" name="name" placeholder="Александр" required>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="mail@example.com" required>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="phone">Телефон</label>
-                        <input type="tel" id="phone" name="phone" placeholder="33123456789" pattern="[0-9]+"
-                            title="Только цифры" required>
-                    </div>
-
-                    <div class="form__group">
-                        <label>Решите пример: <span id="captcha-question"></span></label>
-                        <input type="text" id="captcha-input" placeholder="Ответ" required>
-                    </div>
-
-                    <div class="form__checkbox">
-                        <input type="checkbox" id="agree" required>
-                        <label for="agree">Я согласен с <a href="./personal-data-policy.php">политикой обработки
-                                данных</a></label>
-                    </div>
-
-                    <button type="submit" class="btn btn--primary btn--full">Отправить запрос</button>
-
-                    <div id="form-success" class="form-message form-message--success">Ваше сообщение успешно отправлено!
-                    </div>
-                    <div id="form-error" class="form-message form-message--error">Ошибка. Проверьте капчу или данные.
-                    </div>
-                </form>
             </div>
         </div>
-    </div>
-</section>
-        </main>
+    </section>
+</main>
 
         <footer class="footer">
             <div class="container footer__container">
@@ -466,13 +443,35 @@
                 </p>
             </div>
         </footer>
-
+<div class="mobile-menu">
+    <div class="mobile-menu__inner">
+        <button class="mobile-menu__close"><i data-lucide="x"></i></button>
+        <nav class="mobile-menu__nav">
+            <ul class="mobile-menu__list">
+                <li><a href="./#hero" class="mobile-menu__link">Главная</a></li>
+                <li><a href="./#solutions" class="mobile-menu__link">Решения</a></li>
+                <li><a href="./#process" class="mobile-menu__link">Процесс</a></li>
+                <li><a href="./#blog" class="mobile-menu__link">Блог</a></li>
+                <li><a href="./#reviews" class="mobile-menu__link">Отзывы</a></li>
+                <li><a href="./#contact" class="btn btn--primary">Связаться</a></li>
+            </ul>
+        </nav>
     </div>
+</div>
+
+<div id="cookie-popup" class="cookie-popup">
+    <div class="cookie-popup__content">
+        <p>Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.php">Cookie
+                политике</a>.</p>
+        <button id="cookie-accept" class="btn btn--primary btn--sm">Принять</button>
+    </div>
+</div>
+    </div>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
