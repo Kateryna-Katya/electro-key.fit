@@ -131,3 +131,18 @@ AOS.init({
     once: true,
     offset: 100
 });
+// Обновляем иконки Lucide для новой секции
+lucide.createIcons();
+
+// Дополнительная анимация появления через GSAP для плавности
+gsap.from('.blog-card', {
+    scrollTrigger: {
+        trigger: '.blog__grid',
+        start: 'top 85%'
+    },
+    opacity: 0,
+    y: 40,
+    duration: 1,
+    stagger: 0.2,
+    ease: 'power3.out'
+});
